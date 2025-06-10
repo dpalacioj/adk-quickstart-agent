@@ -1,12 +1,13 @@
 from google.adk.agents import Agent
 from google.adk.tools import google_search
+import datetime
 
 def get_current_time() -> dict:
     """
     Get the current time in the format YYYY-MM-DD HH:MM:SS
     """
     return {
-        "current_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "current_time": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     }
 
 root_agent = Agent(
